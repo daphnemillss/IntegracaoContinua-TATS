@@ -40,12 +40,12 @@ public class MediaTeste {
     @Test
     public void vetorOrdenadoTest2(){
         double v[] = {1,2,3,4,5};
-        CalculadoraMedia m = new CalculadoraMedia();
+        Media m = new Media();
         double res = m.getMedia(v);
-        double menorRes = m.getMenorValor();
-        double maiorRes = m.getMaiorValor();
-        int qtdMaiorMedia = m.getQtdMaiorMedia();
-        int qtdMenorMedia = m.getQtdMenorMedia();
+        double menorRes = m.getMenorValor(v);
+        double maiorRes = m.getMaiorValor(v);
+        int qtdMaiorMedia = m.getQtdMaiorMedia(v);
+        int qtdMenorMedia = m.getQtdMenorMedia(v);
         assertEquals(3.0 ,res, 0.01);
         assertEquals(1.0, menorRes, 0.01);
         assertEquals(5.0, maiorRes, 0.01);
