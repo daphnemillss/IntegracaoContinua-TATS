@@ -38,15 +38,15 @@ public class NmaiorNmenorTest {
     }
 
     @Test
-    public void NMaiorNMenorTeste(){
+    public void NMaiorMenorTeste(){
         NMaiorNMenor nm = new NMaiorNMenor();
         double v[]={1,2,3,4,5};
         double v1[] = nm.getNMaior(v, 2);
         double v2[] = nm.getNMenor(v, 2);
         
         assertEquals(4.0f, v1[0], 0.01);
-        assertEquals(5.0f, v1[0], 0.01);
+        assertEquals(5.0f, v1[1], 0.01);
         assertEquals(1.0f, v2[0], 0.01);
-        assertEquals(2.0f, v2[0], 0.01);
+        assertEquals(2.0f, v2[1], 0.01);
     }
 }
