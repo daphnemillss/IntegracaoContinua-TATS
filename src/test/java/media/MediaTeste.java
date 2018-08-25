@@ -1,4 +1,4 @@
-package mediana;
+package media;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,9 +16,9 @@ import static org.junit.Assert.*;
  *
  * @author daphnemillss
  */
-public class MedianaTest {
+public class MediaTeste {
     
-    public MedianaTest() {
+    public MediaTeste() {
     }
     
     @BeforeClass
@@ -38,11 +38,18 @@ public class MedianaTest {
     }
 
     @Test
-    public void vetorOrdenadoTest(){
+    public void vetorOrdenadoTest2(){
         double v[] = {1,2,3,4,5};
-        CalculadoraMediana m = new CalculadoraMediana();
-        double res = m.getMediana();
-        assertEquals(3.0, res, 0.01);
+        CalculadoraMedia m = new CalculadoraMedia();
+        double res = m.getMedia(v);
+        double menorRes = m.getMenorValor();
+        double maiorRes = m.getMaiorValor();
+        int qtdMaiorMedia = m.getQtdMaiorMedia();
+        int qtdMenorMedia = m.getQtdMenorMedia();
+        assertEquals(3.0 ,res, 0.01);
+        assertEquals(1.0, menorRes, 0.01);
+        assertEquals(5.0, maiorRes, 0.01);
+        assertEquals(2, qtdMaiorMedia);
+        assertEquals(2, qtdMenorMedia);
     }
-
 }
